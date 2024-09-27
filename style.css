@@ -1,0 +1,357 @@
+body{
+    padding: 0;
+    margin: 0;    
+    font-weight: 400;
+    text-align: center;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+
+/*ハンバーガーメニュー*/
+
+nav{
+    display: block;
+    width: 500px;
+    position: fixed;
+    background-color: #101012;
+    top: 0;
+    right: -500px;
+    bottom: 0;
+    transition: all 0.5s;
+    z-index: 3;
+    opacity: 0;
+}
+
+.open nav{
+    right: 0;
+    opacity: 1;
+}
+
+nav .inner{
+    padding: 50px;
+}
+
+nav .inner ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .inner ul li{
+    margin: 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+nav .inner ul li a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 1rem;
+    transition-duration: 0.2s;
+    transition: 500ms;
+}
+
+nav .inner ul li a:hover{
+    background-color: #4f4f4f;
+}
+
+.batu{
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.batu span{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+
+.batu span:nth-child(1){
+    top: 4px;
+}
+
+.batu span:nth-child(2){
+    top: 14px;
+}
+
+.batu span:nth-child(3){
+    bottom: 4px;
+}
+
+.open .batu span:nth-child(1){
+    transform: translateY(10px) rotate(-135deg);
+    background-color: white;
+}
+
+.open .batu span:nth-child(2){
+    opacity: 0;
+    background-color: white;
+}
+
+.open .batu span:nth-child(3){
+    transform: translateY(-10px) rotate(135deg);
+    background-color: white;
+}
+
+#mask{
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #mask{
+    display: block;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    opacity: 0.4;
+}
+
+@media screen and (max-width:600px){
+    nav {
+        width: 100vw;
+        right: -100vw;
+    }
+}
+/* PCヘッダー */
+#header{
+    text-align: right;
+    top: 0px;
+    color: black;
+    background: #ffffffbe;
+    position: sticky;
+}
+#header #container{
+    display: flex;
+    align-items: center;
+}
+#area_logo_header .logo{
+    display: block;
+    padding: 20px;
+}
+#area_logo_header .logo img{
+    height: 60px;
+    vertical-align: bottom;
+    padding-left: 80px;
+}
+.sitemap_div{
+    width: 100vw;
+    text-align: right;
+}
+.sitemap{
+    padding-right: 100px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+@media screen and (max-width:600px){
+    #header{
+        display: none;
+    }
+}
+/*ヘッダーの画像*/
+
+#gazoutop{
+    width: auto;
+    height: 100px;
+}
+
+@media screen and (max-width:600px){
+    #gazoutop{
+        padding: 30px;
+        width: 60vw;
+        height: auto;
+    }
+}
+
+/*スマホヘッダー*/
+
+header{
+    top: 0px;
+    position: sticky;
+    text-align: center;
+    /* left: 50%; */
+    /* transform: translate(-50%); */
+    font-size: 48px;
+    background-color: #ffffffbe;
+    width: 100%;
+    height: 100px;
+}
+@media screen and (min-width:600px){
+    header{
+        display: none;
+    }
+}
+
+/*トップにスクロールして行くやつ*/
+
+.topmozi{
+    text-align: right;
+    font-size: 15px;
+}
+
+#pagetop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    
+}
+
+#pagetop a{
+    position: relative;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    background:#00334d;
+    transition: opacity .6s ease;
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+    border-radius:100%;
+    color: #FFF;
+    border-top: 5px;
+    border-right: 5px;
+    transition: (45deg);
+}
+
+#pagetop a:hover {
+    opacity: .3;
+}
+
+@media screen and (max-width:600px){
+#pagetop a {
+    width: 50px;
+    height: 50px;
+}
+}
+
+/*前へ*/
+
+#previous{
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 500ms;
+    background-color: #ffffff;
+    border: 3px solid rgb(0, 0, 0);
+    text-align: left;
+}
+
+#previous:hover{
+    background-color: #9898ff;
+}
+
+@media screen and (max-width:600px){
+    #previous{
+        font-size: 6vw;
+        margin: 10vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    #previous{
+        font-size: 2vw;
+        margin: 20vw;
+    }
+}
+
+/*次へ*/
+
+#next{
+    font-size: 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 500ms;
+    background-color: #ffffff;
+    border: 3px solid rgb(0, 0, 0);
+    text-align: left;
+}
+#next:hover{
+    background-color: #9898ff;
+}
+
+@media screen and (max-width:600px){
+    #next{
+        font-size: 6vw;
+        margin: 10vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    #next{
+        font-size: 2vw;
+        margin: 20vw;
+    }
+}
+
+/*前へと次へどちらにも共通するもの*/
+
+.idou{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 5px 20px 5px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 500ms;
+    background-color: #ffffff;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.idou:hover{
+    background-color: #000000;
+}
+
+/*文のスタイル*/
+
+#TOP-GAMEN{
+    padding-top: 0px;
+}
+
+.title{
+    color: black;
+    font-size: 40px;
+}
+
+.heading{
+    width: 80%;
+    border-left: 3px solid #000000;
+    padding: 10px 40px 10px 40px;
+    color: black;
+    font-size: 40px;
+}
+
+.maintext{
+    margin: 20%;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+.marker{
+    background: linear-gradient(transparent 60%, #23b9ff 60%);
+}
+
+
+/*めっちゃ汚い。ごめんね。*/
+/*必ず文にはtitleかheadingかmaintextかmarkerっていうクラス付けてね。*/
